@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Alabama",
+    "abbreviation": "AL",
+    "flower": "Camellia",
+    "capital": "Montgomery",
+    "landmark": "The U.S. Space & Rocket Center is here.",
+    "giveaway": "Think “Sweet Home” and the Crimson Tide."
+  },
+  {
+    "name": "Alaska",
+    "abbreviation": "AK",
+    "flower": "Forget-me-not",
+    "capital": "Juneau",
+    "landmark": "Denali towers over this state.",
+    "giveaway": "The largest state, northwest of Canada."
+  },
+  {
+    "name": "Arizona",
+    "abbreviation": "AZ",
+    "flower": "Saguaro cactus blossom",
+    "capital": "Phoenix",
+    "landmark": "Petrified Forest National Park is here.",
+    "giveaway": "Home of the Grand Canyon."
+  },
+  {
+    "name": "Arkansas",
+    "abbreviation": "AR",
+    "flower": "Apple blossom",
+    "capital": "Little Rock",
+    "landmark": "You can dig for diamonds at a state park here.",
+    "giveaway": "Its capital is Little Rock; it is just south of Missouri."
+  },
+  {
+    "name": "California",
+    "abbreviation": "CA",
+    "flower": "California poppy",
+    "capital": "Sacramento",
+    "landmark": "Yosemite National Park is here.",
+    "giveaway": "Hollywood and the Golden Gate Bridge call it home."
+  },
+  {
+    "name": "Colorado",
+    "abbreviation": "CO",
+    "flower": "Rocky Mountain columbine",
+    "capital": "Denver",
+    "landmark": "Mesa Verde preserves ancient cliff dwellings here.",
+    "giveaway": "The Rocky Mountain state with Denver as its capital."
+  },
+  {
+    "name": "Connecticut",
+    "abbreviation": "CT",
+    "flower": "Mountain laurel",
+    "capital": "Hartford",
+    "landmark": "Mystic Seaport is here.",
+    "giveaway": "New England state home to Yale University in New Haven."
+  },
+  {
+    "name": "Delaware",
+    "abbreviation": "DE",
+    "flower": "Peach blossom",
+    "capital": "Dover",
+    "landmark": "Rehoboth Beach is here.",
+    "giveaway": "The first state to ratify the U.S. Constitution."
+  },
+  {
+    "name": "Florida",
+    "abbreviation": "FL",
+    "flower": "Orange blossom",
+    "capital": "Tallahassee",
+    "landmark": "Everglades National Park is here.",
+    "giveaway": "Miami, Disney World, and the Keys."
+  },
+  {
+    "name": "Georgia",
+    "abbreviation": "GA",
+    "flower": "Cherokee rose",
+    "capital": "Atlanta",
+    "landmark": "Savannah's historic squares are here.",
+    "giveaway": "The Peach State, with Atlanta as its capital."
+  },
+  {
+    "name": "Hawaii",
+    "abbreviation": "HI",
+    "flower": "Yellow hibiscus",
+    "capital": "Honolulu",
+    "landmark": "Haleakalā National Park is here.",
+    "giveaway": "The only U.S. state made entirely of islands."
+  },
+  {
+    "name": "Idaho",
+    "abbreviation": "ID",
+    "flower": "Syringa",
+    "capital": "Boise",
+    "landmark": "Craters of the Moon National Monument is here.",
+    "giveaway": "Famous for potatoes, with Boise as its capital."
+  },
+  {
+    "name": "Illinois",
+    "abbreviation": "IL",
+    "flower": "Violet",
+    "capital": "Springfield",
+    "landmark": "Starved Rock State Park is here.",
+    "giveaway": "Chicago is its largest city."
+  },
+  {
+    "name": "Indiana",
+    "abbreviation": "IN",
+    "flower": "Peony",
+    "capital": "Indianapolis",
+    "landmark": "Its dunes meet the shores of Lake Michigan.",
+    "giveaway": "Home of the Indianapolis 500."
+  },
+  {
+    "name": "Iowa",
+    "abbreviation": "IA",
+    "flower": "Wild rose",
+    "capital": "Des Moines",
+    "landmark": "The Field of Dreams movie site is here.",
+    "giveaway": "The Hawkeye State, with Des Moines as its capital."
+  },
+  {
+    "name": "Kansas",
+    "abbreviation": "KS",
+    "flower": "Sunflower",
+    "capital": "Topeka",
+    "landmark": "Tallgrass Prairie National Preserve is here.",
+    "giveaway": "Dorothy's home in The Wizard of Oz."
+  },
+  {
+    "name": "Kentucky",
+    "abbreviation": "KY",
+    "flower": "Goldenrod",
+    "capital": "Frankfort",
+    "landmark": "Mammoth Cave National Park is here.",
+    "giveaway": "Famous for its Derby, bourbon, and bluegrass."
+  },
+  {
+    "name": "Louisiana",
+    "abbreviation": "LA",
+    "flower": "Magnolia",
+    "capital": "Baton Rouge",
+    "landmark": "The French Quarter is here.",
+    "giveaway": "New Orleans, Mardi Gras, and the bayou."
+  },
+  {
+    "name": "Maine",
+    "abbreviation": "ME",
+    "flower": "White pine cone and tassel",
+    "capital": "Augusta",
+    "landmark": "Acadia National Park is here.",
+    "giveaway": "The northeasternmost state, famous for lobster."
+  },
+  {
+    "name": "Maryland",
+    "abbreviation": "MD",
+    "flower": "Black-eyed Susan",
+    "capital": "Annapolis",
+    "landmark": "Fort McHenry is here.",
+    "giveaway": "Baltimore and Chesapeake Bay blue crabs."
+  },
+  {
+    "name": "Massachusetts",
+    "abbreviation": "MA",
+    "flower": "Mayflower",
+    "capital": "Boston",
+    "landmark": "Cape Cod extends into the Atlantic here.",
+    "giveaway": "Boston, Harvard, and Plymouth Rock."
+  },
+  {
+    "name": "Michigan",
+    "abbreviation": "MI",
+    "flower": "Apple blossom",
+    "capital": "Lansing",
+    "landmark": "Isle Royale National Park is here.",
+    "giveaway": "Two peninsulas, shaped partly like a mitten, and Detroit."
+  },
+  {
+    "name": "Minnesota",
+    "abbreviation": "MN",
+    "flower": "Pink and white lady's slipper",
+    "capital": "Saint Paul",
+    "landmark": "Voyageurs National Park is here.",
+    "giveaway": "The Land of 10,000 Lakes and the Twin Cities."
+  },
+  {
+    "name": "Mississippi",
+    "abbreviation": "MS",
+    "flower": "Magnolia",
+    "capital": "Jackson",
+    "landmark": "The city of Tupelo is here.",
+    "giveaway": "Shares its name with the great river beside it; capital Jackson."
+  },
+  {
+    "name": "Missouri",
+    "abbreviation": "MO",
+    "flower": "Hawthorn",
+    "capital": "Jefferson City",
+    "landmark": "The Ozarks stretch across this state.",
+    "giveaway": "The Gateway Arch stands in its city of St. Louis."
+  },
+  {
+    "name": "Montana",
+    "abbreviation": "MT",
+    "flower": "Bitterroot",
+    "capital": "Helena",
+    "landmark": "Glacier National Park is here.",
+    "giveaway": "Big Sky Country, just south of Canada."
+  },
+  {
+    "name": "Nebraska",
+    "abbreviation": "NE",
+    "flower": "Goldenrod",
+    "capital": "Lincoln",
+    "landmark": "Chimney Rock is a famous landmark here.",
+    "giveaway": "The Cornhusker State, home to Omaha."
+  },
+  {
+    "name": "Nevada",
+    "abbreviation": "NV",
+    "flower": "Sagebrush",
+    "capital": "Carson City",
+    "landmark": "Great Basin National Park is here.",
+    "giveaway": "Las Vegas and the famous Strip."
+  },
+  {
+    "name": "New Hampshire",
+    "abbreviation": "NH",
+    "flower": "Purple lilac",
+    "capital": "Concord",
+    "landmark": "Mount Washington is here.",
+    "giveaway": "The Granite State, whose motto is “Live Free or Die.”"
+  },
+  {
+    "name": "New Jersey",
+    "abbreviation": "NJ",
+    "flower": "Violet",
+    "capital": "Trenton",
+    "landmark": "The Pine Barrens cover part of this state.",
+    "giveaway": "The Garden State, home to Atlantic City and the Jersey Shore."
+  },
+  {
+    "name": "New Mexico",
+    "abbreviation": "NM",
+    "flower": "Yucca flower",
+    "capital": "Santa Fe",
+    "landmark": "White Sands National Park is here.",
+    "giveaway": "Albuquerque, Roswell, and the Land of Enchantment."
+  },
+  {
+    "name": "New York",
+    "abbreviation": "NY",
+    "flower": "Rose",
+    "capital": "Albany",
+    "landmark": "The Adirondack Mountains are here.",
+    "giveaway": "Home to the Big Apple and the Statue of Liberty."
+  },
+  {
+    "name": "North Carolina",
+    "abbreviation": "NC",
+    "flower": "American dogwood",
+    "capital": "Raleigh",
+    "landmark": "The Outer Banks line its coast.",
+    "giveaway": "The Wright brothers flew at Kitty Hawk here."
+  },
+  {
+    "name": "North Dakota",
+    "abbreviation": "ND",
+    "flower": "Wild prairie rose",
+    "capital": "Bismarck",
+    "landmark": "Theodore Roosevelt National Park is here.",
+    "giveaway": "The northern of the two Dakotas, home to Fargo."
+  },
+  {
+    "name": "Ohio",
+    "abbreviation": "OH",
+    "flower": "Scarlet carnation",
+    "capital": "Columbus",
+    "landmark": "Cuyahoga Valley National Park is here.",
+    "giveaway": "The Buckeye State, home to Cleveland and Cincinnati."
+  },
+  {
+    "name": "Oklahoma",
+    "abbreviation": "OK",
+    "flower": "Oklahoma rose",
+    "capital": "Oklahoma City",
+    "landmark": "The city of Tulsa is here.",
+    "giveaway": "The Sooner State, just north of Texas."
+  },
+  {
+    "name": "Oregon",
+    "abbreviation": "OR",
+    "flower": "Oregon grape",
+    "capital": "Salem",
+    "landmark": "Crater Lake National Park is here.",
+    "giveaway": "Portland's state, between California and Washington."
+  },
+  {
+    "name": "Pennsylvania",
+    "abbreviation": "PA",
+    "flower": "Mountain laurel",
+    "capital": "Harrisburg",
+    "landmark": "Gettysburg's battlefield is here.",
+    "giveaway": "Philadelphia, the Liberty Bell, and Pittsburgh."
+  },
+  {
+    "name": "Rhode Island",
+    "abbreviation": "RI",
+    "flower": "Violet",
+    "capital": "Providence",
+    "landmark": "Newport's historic mansions are here.",
+    "giveaway": "The smallest U.S. state by area."
+  },
+  {
+    "name": "South Carolina",
+    "abbreviation": "SC",
+    "flower": "Yellow jessamine",
+    "capital": "Columbia",
+    "landmark": "Congaree National Park is here.",
+    "giveaway": "Charleston and Myrtle Beach; the southern Carolina."
+  },
+  {
+    "name": "South Dakota",
+    "abbreviation": "SD",
+    "flower": "Pasque flower",
+    "capital": "Pierre",
+    "landmark": "Badlands National Park is here.",
+    "giveaway": "Four presidents are carved into Mount Rushmore here."
+  },
+  {
+    "name": "Tennessee",
+    "abbreviation": "TN",
+    "flower": "Iris",
+    "capital": "Nashville",
+    "landmark": "Great Smoky Mountains National Park partly lies here.",
+    "giveaway": "Nashville country music and Elvis's Graceland in Memphis."
+  },
+  {
+    "name": "Texas",
+    "abbreviation": "TX",
+    "flower": "Bluebonnet",
+    "capital": "Austin",
+    "landmark": "Big Bend National Park is here.",
+    "giveaway": "The Lone Star State, home to Houston and Dallas."
+  },
+  {
+    "name": "Utah",
+    "abbreviation": "UT",
+    "flower": "Sego lily",
+    "capital": "Salt Lake City",
+    "landmark": "Zion and Arches national parks are here.",
+    "giveaway": "The Great Salt Lake gives its capital its name."
+  },
+  {
+    "name": "Vermont",
+    "abbreviation": "VT",
+    "flower": "Red clover",
+    "capital": "Montpelier",
+    "landmark": "The Green Mountains run through this state.",
+    "giveaway": "The Green Mountain State, famous for maple syrup."
+  },
+  {
+    "name": "Virginia",
+    "abbreviation": "VA",
+    "flower": "American dogwood",
+    "capital": "Richmond",
+    "landmark": "Shenandoah National Park is here.",
+    "giveaway": "Jamestown and Williamsburg; its capital is Richmond."
+  },
+  {
+    "name": "Washington",
+    "abbreviation": "WA",
+    "flower": "Coast rhododendron",
+    "capital": "Olympia",
+    "landmark": "Mount Rainier National Park is here.",
+    "giveaway": "Seattle and the Space Needle; in the Pacific Northwest."
+  },
+  {
+    "name": "West Virginia",
+    "abbreviation": "WV",
+    "flower": "Rhododendron",
+    "capital": "Charleston",
+    "landmark": "New River Gorge National Park is here.",
+    "giveaway": "“Country Roads” sings of this Mountain State."
+  },
+  {
+    "name": "Wisconsin",
+    "abbreviation": "WI",
+    "flower": "Wood violet",
+    "capital": "Madison",
+    "landmark": "The Apostle Islands are here.",
+    "giveaway": "Cheeseheads, Green Bay Packers, and Milwaukee."
+  },
+  {
+    "name": "Wyoming",
+    "abbreviation": "WY",
+    "flower": "Indian paintbrush",
+    "capital": "Cheyenne",
+    "landmark": "Grand Teton National Park is here.",
+    "giveaway": "Most of Yellowstone lies in this state, whose capital is Cheyenne."
+  }
+]

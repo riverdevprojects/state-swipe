@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	"classes" = {
+	};
+	"objectVersion" = "56";
+	"archiveVersion" = "1";
+	"objects" = {
+		"000000000000000000000006" = {
+			"path" = "StateSwipe.app";
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"000000000000000000000068" = {
+			"path" = "states.json";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.json";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000D1" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000071";
+		};
+		"00000000000000000000000A" = {
+			"isa" = "XCConfigurationList";
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+			"buildConfigurations" = ("00000000000000000000000C", "00000000000000000000000D");
+		};
+		"000000000000000000000005" = {
+			"buildConfigurationList" = "00000000000000000000000B";
+			"productReference" = "000000000000000000000006";
+			"productType" = "com.apple.product-type.application";
+			"productName" = "StateSwipe";
+			"isa" = "PBXNativeTarget";
+			"buildPhases" = ("000000000000000000000007", "000000000000000000000008", "000000000000000000000009");
+			"dependencies" = ();
+			"name" = "StateSwipe";
+			"buildRules" = ();
+		};
+		"0000000000000000000000C9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000065";
+		};
+		"000000000000000000000067" = {
+			"path" = "GameView.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000D0" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000070";
+		};
+		"00000000000000000000000F" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"VALIDATE_PRODUCT" = "YES";
+				"MARKETING_VERSION" = "1.0";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"DEVELOPMENT_TEAM" = "AGZ456A9MS";
+				"CURRENT_PROJECT_VERSION" = "2";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.riverdevprojects.stateswipe";
+				"INFOPLIST_KEY_LSApplicationCategoryType" = "public.app-category.trivia-games";
+				"INFOPLIST_KEY_ITSAppUsesNonExemptEncryption" = "NO";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Stateswipe";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"INFOPLIST_KEY_UILaunchScreen_Generation" = "YES";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_KEY_UIUserInterfaceStyle" = "Light";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation" = "YES";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations" = "UIInterfaceOrientationPortrait";
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+			};
+			"name" = "Release";
+		};
+		"000000000000000000000004" = {
+			"isa" = "PBXGroup";
+			"name" = "Products";
+			"children" = ("000000000000000000000006", "00000000000000000000012F");
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CD" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000069";
+		};
+		"0000000000000000000000C8" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000064";
+		};
+		"000000000000000000000066" = {
+			"path" = "GameStore.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000073" = {
+			"path" = "Assets.xcassets";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000000E" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"MARKETING_VERSION" = "1.0";
+				"DEVELOPMENT_TEAM" = "AGZ456A9MS";
+				"CURRENT_PROJECT_VERSION" = "2";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.riverdevprojects.stateswipe";
+				"INFOPLIST_KEY_LSApplicationCategoryType" = "public.app-category.trivia-games";
+				"INFOPLIST_KEY_ITSAppUsesNonExemptEncryption" = "NO";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Stateswipe";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"INFOPLIST_KEY_UILaunchScreen_Generation" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"INFOPLIST_KEY_UIUserInterfaceStyle" = "Light";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ENABLE_TESTABILITY" = "YES";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation" = "YES";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations" = "UIInterfaceOrientationPortrait";
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"000000000000000000000009" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ();
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000003" = {
+			"path" = "StateSwipe";
+			"isa" = "PBXGroup";
+			"children" = ("000000000000000000000064", "000000000000000000000065", "000000000000000000000066", "000000000000000000000067", "000000000000000000000068", "000000000000000000000069", "000000000000000000000073", "000000000000000000000072", "000000000000000000000071", "000000000000000000000070");
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000CC" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000068";
+		};
+		"000000000000000000000065" = {
+			"path" = "Game.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"000000000000000000000072" = {
+			"path" = "AppInformationView.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000000D" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SDKROOT" = "iphoneos";
+			};
+			"name" = "Release";
+		};
+		"000000000000000000000008" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ("0000000000000000000000CC", "0000000000000000000000CD", "0000000000000000000000D3");
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000002" = {
+			"isa" = "PBXGroup";
+			"sourceTree" = "<group>";
+			"children" = ("000000000000000000000003", "000000000000000000000004", "00000000000000000000012E");
+		};
+		"0000000000000000000000CB" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000067";
+		};
+		"000000000000000000000064" = {
+			"path" = "StateSwipeApp.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000D3" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000073";
+		};
+		"000000000000000000000071" = {
+			"path" = "HintCard.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000000C" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SWIFT_VERSION" = "5.0";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SDKROOT" = "iphoneos";
+			};
+			"name" = "Debug";
+		};
+		"000000000000000000000007" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ("0000000000000000000000C8", "0000000000000000000000C9", "0000000000000000000000CA", "0000000000000000000000CB", "0000000000000000000000D2", "0000000000000000000000D1", "0000000000000000000000D0");
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000001" = {
+			"buildConfigurationList" = "00000000000000000000000A";
+			"targets" = ("000000000000000000000005", "000000000000000000000135");
+			"developmentRegion" = "en";
+			"knownRegions" = ("en", "Base");
+			"isa" = "PBXProject";
+			"compatibilityVersion" = "Xcode 14.0";
+			"productRefGroup" = "000000000000000000000004";
+			"projectDirPath" = "";
+			"attributes" = {
+				"LastUpgradeCheck" = "1640";
+			};
+			"hasScannedForEncodings" = "0";
+			"projectRoot" = "";
+			"mainGroup" = "000000000000000000000002";
+		};
+		"0000000000000000000000CA" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000066";
+		};
+		"000000000000000000000069" = {
+			"path" = "PrivacyInfo.xcprivacy";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xml";
+			"sourceTree" = "<group>";
+		};
+		"0000000000000000000000D2" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000072";
+		};
+		"000000000000000000000070" = {
+			"path" = "TutorialView.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000000B" = {
+			"isa" = "XCConfigurationList";
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+			"buildConfigurations" = ("00000000000000000000000E", "00000000000000000000000F");
+		};
+		"00000000000000000000012C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "StateSwipeUITests.swift";
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000012D" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "00000000000000000000012C";
+		};
+		"00000000000000000000012E" = {
+			"isa" = "PBXGroup";
+			"path" = "StateSwipeUITests";
+			"children" = ("00000000000000000000012C");
+			"sourceTree" = "<group>";
+		};
+		"00000000000000000000012F" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"path" = "StateSwipeUITests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"000000000000000000000130" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ("00000000000000000000012D");
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000131" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ("00000000000000000000013B");
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000132" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = ();
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"000000000000000000000133" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "000000000000000000000001";
+			"proxyType" = "1";
+			"remoteGlobalIDString" = "000000000000000000000005";
+			"remoteInfo" = "StateSwipe";
+		};
+		"000000000000000000000134" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "000000000000000000000005";
+			"targetProxy" = "000000000000000000000133";
+		};
+		"000000000000000000000135" = {
+			"isa" = "PBXNativeTarget";
+			"name" = "StateSwipeUITests";
+			"productName" = "StateSwipeUITests";
+			"productType" = "com.apple.product-type.bundle.ui-testing";
+			"productReference" = "00000000000000000000012F";
+			"buildConfigurationList" = "000000000000000000000136";
+			"buildPhases" = ("000000000000000000000130", "000000000000000000000131", "000000000000000000000132");
+			"buildRules" = ();
+			"dependencies" = ("000000000000000000000134");
+		};
+		"000000000000000000000136" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ("000000000000000000000137", "000000000000000000000138");
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+		};
+		"000000000000000000000137" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Debug";
+			"buildSettings" = {
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.riverdevprojects.stateswipe.uitests";
+				"SWIFT_VERSION" = "5.0";
+				"TEST_TARGET_NAME" = "StateSwipe";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "AGZ456A9MS";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+			};
+		};
+		"000000000000000000000138" = {
+			"isa" = "XCBuildConfiguration";
+			"name" = "Release";
+			"buildSettings" = {
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.riverdevprojects.stateswipe.uitests";
+				"SWIFT_VERSION" = "5.0";
+				"TEST_TARGET_NAME" = "StateSwipe";
+				"TARGETED_DEVICE_FAMILY" = "1";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"DEVELOPMENT_TEAM" = "AGZ456A9MS";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+			};
+		};
+		"00000000000000000000013B" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "000000000000000000000068";
+		};
+	};
+	"rootObject" = "000000000000000000000001";
+}
