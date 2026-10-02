@@ -8,9 +8,13 @@ Open `StateSwipe.xcodeproj`, select the **StateSwipe** scheme and an iPhone simu
 
 ## Gameplay
 
-Five ordered hints per state. The first is free; later costs are 70/90, 160, 250, and 350 points. Start with 1,000 points; a correct final guess earns the remainder, an incorrect guess earns zero. State names, abbreviations, and unambiguous minor typos are accepted. Invalid text does not use the guess.
+Five ordered hints per state. The first is free; later costs are 90, 160, 250, and 350 points. Start with 1,000 points; a correct final guess earns the remainder, an incorrect guess earns zero. State names, abbreviations, and unambiguous minor typos are accepted. Invalid text does not use the guess.
 
-Sessions have 1–50 unique states (default five). Current games and separate personal bests for each session length are saved locally. The question mark opens an isolated six-step tutorial with animated touch pointers, practice input and submission, scoring, and session-length selection. Back, Skip, Close, and Finish never change the active game.
+After each state guess, a one-attempt postal abbreviation bonus doubles earned points for a correct code. Wrong codes and skips retain the original points. Wrong state guesses earn zero, with the bonus offered as practice.
+
+The offline bank contains 1,364 rated clues, with at least five variations for every state at every hint level. Choices rotate through unused alternatives and remain fixed when a saved game resumes. See `docs/hint-bank.md` for coverage, sources, and difficulty guidelines.
+
+Sessions have 1–50 unique states (default five). Current games and separate personal bests for each session length are saved locally. The question mark opens an isolated seven-step tutorial with animated touch pointers, practice input and submission, scoring, abbreviation bonus, and session-length selection. Back, Skip, Close, and Finish never change the active game.
 
 Larger text uses a single-column hint layout, and Reduce Motion disables card flips and repeating touch animations. VoiceOver labels describe hints, costs, score, and tutorial controls.
 
@@ -25,6 +29,13 @@ swiftc StateSwipe/Game.swift Tests/main.swift -o /tmp/stateswipe-tests
 /tmp/stateswipe-tests StateSwipe/states.json
 ```
 
+Device-local persistence and hint-cycle checks (macOS):
+
+```sh
+swiftc -parse-as-library StateSwipe/Game.swift StateSwipe/GameStore.swift Tests/store.swift -o /tmp/stateswipe-store-tests
+/tmp/stateswipe-store-tests StateSwipe/states.json
+```
+
 ## App Store preparation
 
 See `AppStore/ReleaseChecklist.md` for the exact remaining steps. App icons, privacy manifest, export settings, listing text, reviewer notes, screenshots, and support/privacy page sources are included. No App Store upload or public website deployment has occurred.
@@ -35,4 +46,4 @@ See `AppStore/ReleaseChecklist.md` for the exact remaining steps. App icons, pri
 
 ## Content
 
-Floral emblems reference: https://www.usbg.gov/visit/exhibits/americas-state-flowers-america250-celebration . State facts are in `StateSwipe/states.json`; hint variations and costs are in `Game.swift`.
+Floral emblems reference: https://www.usbg.gov/visit/exhibits/americas-state-flowers-america250-celebration . State facts and the complete hint bank are in `StateSwipe/states.json`; selection and scoring are in `Game.swift`.

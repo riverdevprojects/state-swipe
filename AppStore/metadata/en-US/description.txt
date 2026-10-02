@@ -1,10 +1,13 @@
 How well do you know the 50 U.S. states? Reveal clues, enter your guess, and see how many points you can keep.
 
 Five hints per state
-Start with a floral emblem, then uncover increasingly helpful clues about landmarks, capitals, and more. Your first hint is free. Every additional hint has a visible point cost.
+Explore 1,364 clues across all 50 states. The free clue may reveal a flower, bird, tree, fish, or another obscure fact. Later hints rotate through history, geography, landmarks, capitals, cities, and word puzzles. Your first hint is free. Every additional hint has a visible point cost.
 
 One final guess
 Type a state name or its two-letter abbreviation. Small, unambiguous spelling mistakes are corrected. Correct answers earn the points remaining; wrong answers reveal the state and earn zero.
+
+Abbreviation bonus
+After each guess, enter the two-letter postal code to double your earned points. One bonus attempt per round. Skip or miss the code and keep your original points.
 
 Choose your session
 Play anywhere from 1 to 50 rounds, with five rounds as the default. States do not repeat within a session, and each session length has its own personal best.

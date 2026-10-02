@@ -10,6 +10,9 @@ struct GameView: View {
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @Environment(\.dynamicTypeSize) var typeSize
     @State private var guess = ""
+    @State private var abbreviation = ""
+    @State private var bonusError = ""
+    @FocusState private var bonusTyping: Bool
     @State private var error = ""
     @State private var showSettings = false
     @State private var showHelp = false
@@ -112,14 +115,17 @@ struct GameView: View {
                             .accessibilityIdentifier("guess-error")
                     }
                 }
-            } else { result }
+            } else {
+                result
+                if answerVisible { abbreviationBonus }
+            }
             HStack {
                 Text("HINTS").font(.system(size: 8, weight: .bold)).tracking(1)
                 Spacer()
                 Text("\(game.round.revealed) / 5").font(.caption2)
             }.foregroundColor(.secondary)
             hintGrid
-            if game.round.guess != nil {
+            if game.round.guess != nil && game.round.bonusResolved {
                 Button { game.advance(); typing = false } label: {
                     HStack { Text(game.session.index + 1 == game.session.rounds.count ? "See my score" : "Next state"); Spacer(); Image(systemName: "arrow.right") }
                 }.buttonStyle(RoadButton()).disabled(!answerVisible)
@@ -160,6 +166,52 @@ struct GameView: View {
         }.padding(18).frame(maxWidth: .infinity).background(paper, in: RoundedRectangle(cornerRadius: 15))
             .accessibilityElement(children: .combine)
     }
+    private var abbreviationBonus: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Abbreviation bonus").font(.headline)
+            if !game.round.bonusResolved {
+                Text(game.round.points > 0
+                     ? "Enter the two-letter postal code for \(game.round.state.name) to double this round to \(game.round.points * 2) points."
+                     : "Try the two-letter postal code for \(game.round.state.name). This round earned 0 points; the bonus is practice.")
+                    .font(.subheadline).fixedSize(horizontal: false, vertical: true)
+                HStack {
+                    TextField("Code", text: $abbreviation)
+                        .textInputAutocapitalization(.characters).autocorrectionDisabled()
+                        .font(.title2.monospaced()).focused($bonusTyping)
+                        .submitLabel(.go).onSubmit(submitBonus)
+                        .accessibilityLabel("Two-letter postal abbreviation")
+                        .accessibilityIdentifier("bonus-input")
+                    Button("Submit", action: submitBonus)
+                        .font(.subheadline.weight(.semibold)).padding(12)
+                        .foregroundColor(.white).background(orange, in: RoundedRectangle(cornerRadius: 10))
+                        .disabled(abbreviation.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                        .accessibilityIdentifier("submit-bonus")
+                }.padding(10).background(Color.white, in: RoundedRectangle(cornerRadius: 12))
+                if !bonusError.isEmpty {
+                    Text(bonusError).font(.caption).foregroundColor(.red).accessibilityIdentifier("bonus-error")
+                }
+                Button("Skip bonus") { bonusTyping = false; game.skipBonus() }
+                    .frame(minHeight: 44).font(.subheadline).accessibilityIdentifier("skip-bonus")
+            } else {
+                Text(game.round.bonusCorrect
+                     ? (game.round.points > 0 ? "Correct! Double points earned." : "Correct! Nice practice.")
+                     : (game.round.bonusSkipped == true ? "Bonus skipped. Your points stay the same." : "Your points stay the same."))
+                    .font(.subheadline.weight(.semibold)).accessibilityIdentifier("bonus-result")
+                Text("\(game.round.state.name) = \(game.round.state.abbreviation)")
+                    .font(.title3.monospaced().weight(.semibold)).accessibilityIdentifier("bonus-answer")
+            }
+        }.padding(16).frame(maxWidth: .infinity, alignment: .leading)
+            .background(orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 15))
+    }
+    private func submitBonus() {
+        guard game.submitAbbreviation(abbreviation) else {
+            bonusError = "Enter exactly two letters. No bonus attempt used."
+            return
+        }
+        bonusTyping = false
+        bonusError = ""
+        UINotificationFeedbackGenerator().notificationOccurred(game.round.bonusCorrect ? .success : .warning)
+    }
     private var summary: some View {
         VStack(spacing: 14) {
             Image(systemName: "flag.checkered").font(.largeTitle).foregroundColor(orange)
@@ -168,7 +220,7 @@ struct GameView: View {
             Text(game.session.score > game.bestAtStart ? "New personal best!" : "Session score").font(.subheadline)
             Text("\(game.session.rounds.filter { $0.points > 0 }.count) of \(game.session.rounds.count) states guessed correctly").font(.caption).foregroundColor(.secondary)
             ForEach(Array(game.session.rounds.enumerated()), id: \.offset) { _, round in
-                HStack { Image(systemName: round.points > 0 ? "checkmark.circle.fill" : "xmark.circle").foregroundColor(round.points > 0 ? .green : .red); Text(round.state.name); Spacer(); Text("\(round.points) pts") }.font(.subheadline)
+                HStack { Image(systemName: round.points > 0 ? "checkmark.circle.fill" : "xmark.circle").foregroundColor(round.points > 0 ? .green : .red); Text(round.state.name); Spacer(); if round.bonusCorrect && round.points > 0 { Text("×2").foregroundColor(orange) }; Text("\(round.points) pts") }.font(.subheadline)
             }
             Button("Play again") { game.start(count: game.session.rounds.count); resetInput() }.buttonStyle(RoadButton())
             Button("Change number of rounds") { showSettings = true }.font(.footnote)
@@ -187,7 +239,7 @@ struct GameView: View {
         game.submit(state)
         UINotificationFeedbackGenerator().notificationOccurred(game.round.points > 0 ? .success : .error)
     }
-    private func resetInput() { guess = ""; error = ""; answerVisible = false; flash = false }
+    private func resetInput() { guess = ""; abbreviation = ""; bonusError = ""; bonusTyping = false; error = ""; answerVisible = false; flash = false }
 }
 struct RoadButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {

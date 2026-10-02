@@ -31,7 +31,7 @@ final class StateSwipeUITests: XCTestCase {
         let score = scoreValue()
         tap("help")
         XCTAssertTrue(app.staticTexts["tutorial-progress"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("1 of 6"))
+        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("1 of 7"))
         capture("02-guided-tutorial")
         tap("tutorial-hint-1")
         XCTAssertEqual(app.staticTexts["tutorial-points"].label, "1,000 pts")
@@ -44,18 +44,20 @@ final class StateSwipeUITests: XCTestCase {
         tap("tutorial-submit")
         XCTAssertTrue(app.otherElements["tutorial-result"].exists || app.staticTexts["tutorial-result"].exists)
         tap("tutorial-continue")
+        tap("tutorial-bonus-input")
+        tap("tutorial-bonus-submit")
         tap("tutorial-rounds-3")
         XCTAssertEqual(app.staticTexts["tutorial-rounds"].label, "3 rounds")
         tap("tutorial-back")
-        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("5 of 6"))
-        tap("tutorial-continue")
+        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("6 of 7"))
+        tap("tutorial-bonus-skip")
         tap("tutorial-finish")
         XCTAssertTrue(app.buttons["help"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.buttons["hint-1"].label, clue)
         XCTAssertEqual(scoreValue(), score)
         tap("help")
         XCTAssertTrue(app.staticTexts["tutorial-progress"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("1 of 6"))
+        XCTAssertTrue(app.staticTexts["tutorial-progress"].label.contains("1 of 7"))
         tap("tutorial-close")
         XCTAssertTrue(app.buttons["help"].waitForExistence(timeout: 5))
     }
@@ -65,8 +67,12 @@ final class StateSwipeUITests: XCTestCase {
         capture("03-revealed-hints")
         let hint = app.buttons["hint-5"].label
         let data = try Data(contentsOf: Bundle(for: Self.self).url(forResource: "states", withExtension: "json")!)
-        let states = try JSONSerialization.jsonObject(with: data) as! [[String: String]]
-        let answer = try XCTUnwrap(states.first { hint.contains($0["giveaway"]!) }?["name"])
+        let states = try JSONSerialization.jsonObject(with: data) as! [[String: Any]]
+        let matchingState = try XCTUnwrap(states.first { state in
+            (state["hintPool"] as! [[String: Any]]).contains { hint.contains($0["text"] as! String) }
+        })
+        let answer = matchingState["name"] as! String
+        let code = matchingState["abbreviation"] as! String
         let input = app.textFields["guess-input"]
         input.tap(); input.typeText("banana")
         tap("submit-guess")
@@ -78,10 +84,24 @@ final class StateSwipeUITests: XCTestCase {
         let score = scoreValue()
         XCTAssertNotEqual(score, "0")
         capture("04-correct-answer")
+        let bonus = app.textFields["bonus-input"]
+        XCTAssertTrue(bonus.waitForExistence(timeout: 5))
+        bonus.tap(); bonus.typeText("A")
+        tap("submit-bonus")
+        XCTAssertTrue(app.staticTexts["bonus-error"].waitForExistence(timeout: 3))
+        XCTAssertEqual(scoreValue(), score)
+        bonus.tap(); bonus.typeText(XCUIKeyboardKey.delete.rawValue + code.lowercased())
+        tap("submit-bonus")
+        XCTAssertTrue(app.staticTexts["bonus-result"].waitForExistence(timeout: 3))
+        XCTAssertFalse(app.textFields["bonus-input"].exists)
+        let doubled = scoreValue()
+        XCTAssertEqual(doubled, "300")
+        capture("05-abbreviation-bonus")
         app.terminate()
         app.launchArguments = ["--ui-testing", "--resume-testing"]
         app.launch()
-        XCTAssertEqual(scoreValue(), score)
+        XCTAssertEqual(scoreValue(), doubled)
+        XCTAssertTrue(app.staticTexts["bonus-answer"].exists)
         XCTAssertFalse(app.textFields["guess-input"].exists)
         XCTAssertTrue(app.staticTexts[answer].exists)
     }

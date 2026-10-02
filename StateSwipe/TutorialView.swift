@@ -12,19 +12,21 @@ struct TutorialView: View {
     @State private var entering = false
     @State private var selectedRounds = 5
     @State private var pulse = false
+    @State private var bonusEntered = false
 
-    private let titles = ["Reveal a hint", "Watch the points", "Enter your guess", "Lock it in", "See your result", "Choose your rounds"]
+    private let titles = ["Reveal a hint", "Watch the points", "Enter your guess", "Lock it in", "See your result", "Double your points", "Choose your rounds"]
     private let instructions = [
-        "Tap the first card. Your first hint is free, so 1,000 points are still available.",
+        "Tap the first card. It is free and very hard. It may show a flower, bird, tree, fish, motto, or another obscure fact.",
         "Tap hint 2. This clue costs 90 points. Later hints cost more; each price is shown before you tap.",
         "Tap the answer box to enter Hawaii for this practice round. In a game, type a state name or abbreviation.",
         "Tap the orange arrow to submit. You get one final guess per state; small, clear typos are corrected.",
         "Correct answers flash green and earn the points left. A wrong guess gets a red X, reveals the answer, and earns zero.",
+        "Tap the code box, then submit HI for Hawaii. A correct postal code doubles earned points. You have one bonus attempt; skipping or a wrong code keeps your original points.",
         "Choose a session length. Your best score is saved separately for each length. Five rounds is the default."
     ]
     private let hints = [
         Hint(title: "A little nature", text: "My floral emblem is yellow hibiscus.", cost: 0),
-        Hint(title: "A small detail", text: "My postal abbreviation starts with H.", cost: 90),
+        Hint(title: "A small detail", text: "My name has six letters.", cost: 90),
         Hint(title: "Somewhere special", text: "Haleakalā National Park is here.", cost: 160),
         Hint(title: "Capital idea", text: "My capital is Honolulu.", cost: 250),
         Hint(title: "The big giveaway", text: "The only U.S. state made entirely of islands.", cost: 350)
@@ -37,7 +39,7 @@ struct TutorialView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("How to play").font(.headline)
-                    Text("Practice · \(step + 1) of 6").font(.caption).foregroundColor(.secondary)
+                    Text("Practice · \(step + 1) of 7").font(.caption).foregroundColor(.secondary)
                         .accessibilityIdentifier("tutorial-progress")
                 }
                 Spacer()
@@ -48,7 +50,7 @@ struct TutorialView: View {
                 ScrollView {
                     VStack(spacing: compact ? 12 : 20) {
                         instruction.id("instruction")
-                        if step == 5 { roundsDemo } else { gameDemo }
+                        if step == 6 { roundsDemo } else if step == 5 { bonusDemo } else { gameDemo }
                         if step == 4 {
                             Button { advance() } label: {
                                 HStack { Text("Continue"); Spacer(); Image(systemName: "arrow.right") }
@@ -63,10 +65,10 @@ struct TutorialView: View {
                     .accessibilityIdentifier("tutorial-back")
                 Spacer()
                 HStack(spacing: 6) {
-                    ForEach(0..<6) { i in Circle().fill(i == step ? orange : ink.opacity(0.15)).frame(width: 6, height: 6) }
+                    ForEach(0..<7) { i in Circle().fill(i == step ? orange : ink.opacity(0.15)).frame(width: 6, height: 6) }
                 }.accessibilityHidden(true)
                 Spacer()
-                Button(step == 5 ? "Done" : "Skip") { dismiss() }.frame(minWidth: 44, minHeight: 44)
+                Button(step == 6 ? "Done" : "Skip") { dismiss() }.frame(minWidth: 44, minHeight: 44)
                     .accessibilityIdentifier("tutorial-done")
             }.font(.subheadline.weight(.semibold)).padding(.horizontal, 24)
         }
@@ -156,6 +158,24 @@ struct TutorialView: View {
                 if step == index && step < 2 { TouchGuide().offset(x: -12, y: -10) }
             }
     }
+    private var bonusDemo: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            Text("Abbreviation bonus").font(.headline)
+            Text("Hawaii · 910 points earned").font(.subheadline)
+            HStack {
+                Button { bonusEntered = true } label: {
+                    Text(bonusEntered ? "HI" : "Two-letter code").font(.title2.monospaced())
+                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
+                }.accessibilityIdentifier("tutorial-bonus-input")
+                    .overlay(alignment: .trailing) { if !bonusEntered { TouchGuide() } }
+                Button("Submit") { advance() }.disabled(!bonusEntered)
+                    .accessibilityIdentifier("tutorial-bonus-submit")
+                    .overlay(alignment: .bottomTrailing) { if bonusEntered { TouchGuide().offset(y: 20) } }
+            }.padding(14).background(Color.white, in: RoundedRectangle(cornerRadius: 12))
+            Text("Correct: 910 × 2 = 1,820 points").font(.subheadline.weight(.semibold))
+            Button("Skip bonus") { advance() }.frame(minHeight: 44).accessibilityIdentifier("tutorial-bonus-skip")
+        }.padding(20).background(orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 20))
+    }
     private var roundsDemo: some View {
         VStack(alignment: .leading, spacing: 20) {
             Label("Session settings", systemImage: "slider.horizontal.3").font(.headline)
@@ -174,11 +194,12 @@ struct TutorialView: View {
             Button("Start playing") { dismiss() }.buttonStyle(RoadButton()).accessibilityIdentifier("tutorial-finish")
         }.padding(22).background(Color.white.opacity(0.75), in: RoundedRectangle(cornerRadius: 22))
     }
-    private func advance() { move(to: min(step + 1, 5)); UIImpactFeedbackGenerator(style: .light).impactOccurred() }
+    private func advance() { move(to: min(step + 1, 6)); UIImpactFeedbackGenerator(style: .light).impactOccurred() }
     private func move(to value: Int) {
-        step = max(0, min(value, 5))
+        step = max(0, min(value, 6))
         typedGuess = step >= 3 ? "Hawaii" : ""
         pulse = false
+        bonusEntered = false
     }
 }
 

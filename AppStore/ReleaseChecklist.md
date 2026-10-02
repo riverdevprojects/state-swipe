@@ -5,7 +5,7 @@
 - Native iPhone app, iOS 16.0 deployment target (retains iPhone 8 compatibility).
 - Version 1.0, build 2; existing bundle ID `com.riverdevprojects.stateswipe` and signing team `AGZ456A9MS` preserved.
 - Complete opaque app icon set, including the 1024 × 1024 App Store icon.
-- Guided six-step practice tutorial with animated touch pointers, Back, Skip, Close, and Finish. Practice never writes to a game or personal best.
+- Guided seven-step practice tutorial with animated touch pointers, Back, Skip, Close, and Finish. Practice never writes to a game or personal best.
 - Minimal gameplay labels; requested taglines removed.
 - UserDefaults privacy manifest, in-app privacy information, and non-exempt-encryption flag set to NO (this build implements no encryption/networking).
 - English listing text and reviewer instructions in this folder.

@@ -1,0 +1,802 @@
+{
+  "AL": {
+    "nickname": "Yellowhammer State",
+    "cities": [
+      "Mobile",
+      "Huntsville",
+      "Birmingham"
+    ],
+    "campus": "Tuscaloosa",
+    "places": [
+      "Russell Cave National Monument",
+      "Little River Canyon National Preserve",
+      "Talladega National Forest",
+      "Gulf State Park",
+      "Birmingham Civil Rights National Monument"
+    ]
+  },
+  "AK": {
+    "nickname": "Last Frontier",
+    "cities": [
+      "Fairbanks",
+      "Sitka",
+      "Anchorage"
+    ],
+    "campus": "Fairbanks",
+    "places": [
+      "Kenai Fjords National Park",
+      "Katmai National Park",
+      "Glacier Bay National Park",
+      "Wrangell–St. Elias National Park",
+      "Tongass National Forest"
+    ]
+  },
+  "AZ": {
+    "nickname": "Grand Canyon State",
+    "cities": [
+      "Flagstaff",
+      "Mesa",
+      "Tucson"
+    ],
+    "campus": "Tempe",
+    "places": [
+      "Saguaro National Park",
+      "Canyon de Chelly National Monument",
+      "Montezuma Castle National Monument",
+      "Sunset Crater Volcano National Monument",
+      "Petrified Forest National Park"
+    ]
+  },
+  "AR": {
+    "nickname": "Natural State",
+    "cities": [
+      "Fayetteville",
+      "Jonesboro",
+      "Fort Smith"
+    ],
+    "campus": "Fayetteville",
+    "places": [
+      "Hot Springs National Park",
+      "Buffalo National River",
+      "Crater of Diamonds State Park",
+      "Petit Jean State Park",
+      "Pea Ridge National Military Park"
+    ]
+  },
+  "CA": {
+    "nickname": "Golden State",
+    "cities": [
+      "San Diego",
+      "San Jose",
+      "Los Angeles"
+    ],
+    "campus": "Berkeley",
+    "places": [
+      "Yosemite National Park",
+      "Joshua Tree National Park",
+      "Sequoia National Park",
+      "Lassen Volcanic National Park",
+      "Channel Islands National Park"
+    ]
+  },
+  "CO": {
+    "nickname": "Centennial State",
+    "cities": [
+      "Fort Collins",
+      "Pueblo",
+      "Colorado Springs"
+    ],
+    "campus": "Boulder",
+    "places": [
+      "Mesa Verde National Park",
+      "Great Sand Dunes National Park",
+      "Black Canyon of the Gunnison National Park",
+      "Garden of the Gods",
+      "Dinosaur National Monument"
+    ]
+  },
+  "CT": {
+    "nickname": "Constitution State",
+    "cities": [
+      "Stamford",
+      "Waterbury",
+      "New Haven"
+    ],
+    "campus": "Storrs",
+    "places": [
+      "Mystic Seaport Museum",
+      "Gillette Castle State Park",
+      "Weir Farm National Historical Park",
+      "Dinosaur State Park",
+      "Mark Twain House"
+    ]
+  },
+  "DE": {
+    "nickname": "First State",
+    "cities": [
+      "Newark",
+      "Middletown",
+      "Wilmington"
+    ],
+    "campus": "Newark",
+    "places": [
+      "Cape Henlopen State Park",
+      "Bombay Hook National Wildlife Refuge",
+      "Hagley Museum",
+      "Winterthur Museum",
+      "Fort DuPont State Park"
+    ]
+  },
+  "FL": {
+    "nickname": "Sunshine State",
+    "cities": [
+      "Orlando",
+      "Tampa",
+      "Miami"
+    ],
+    "campus": "Gainesville",
+    "places": [
+      "Dry Tortugas National Park",
+      "Biscayne National Park",
+      "Castillo de San Marcos National Monument",
+      "Canaveral National Seashore",
+      "Everglades National Park"
+    ]
+  },
+  "GA": {
+    "nickname": "Peach State",
+    "cities": [
+      "Augusta",
+      "Athens",
+      "Savannah"
+    ],
+    "campus": "Athens",
+    "places": [
+      "Cumberland Island National Seashore",
+      "Ocmulgee Mounds National Historical Park",
+      "Fort Pulaski National Monument",
+      "Providence Canyon State Park",
+      "Okefenokee National Wildlife Refuge"
+    ]
+  },
+  "HI": {
+    "nickname": "Aloha State",
+    "cities": [
+      "Hilo",
+      "Kailua",
+      "Honolulu"
+    ],
+    "campus": "Honolulu",
+    "places": [
+      "Haleakalā National Park",
+      "Kalaupapa National Historical Park",
+      "Puʻuhonua o Hōnaunau National Historical Park",
+      "Diamond Head State Monument",
+      "ʻIolani Palace"
+    ]
+  },
+  "ID": {
+    "nickname": "Gem State",
+    "cities": [
+      "Pocatello",
+      "Twin Falls",
+      "Boise"
+    ],
+    "campus": "Moscow",
+    "places": [
+      "Craters of the Moon National Monument",
+      "City of Rocks National Reserve",
+      "Hagerman Fossil Beds National Monument",
+      "Shoshone Falls",
+      "Bruneau Dunes State Park"
+    ]
+  },
+  "IL": {
+    "nickname": "Prairie State",
+    "cities": [
+      "Rockford",
+      "Peoria",
+      "Chicago"
+    ],
+    "campus": "Urbana–Champaign",
+    "places": [
+      "Starved Rock State Park",
+      "Cahokia Mounds State Historic Site",
+      "Lincoln Home National Historic Site",
+      "Pullman National Historical Park",
+      "Garden of the Gods in Shawnee National Forest"
+    ]
+  },
+  "IN": {
+    "nickname": "Hoosier State",
+    "cities": [
+      "Evansville",
+      "South Bend",
+      "Fort Wayne"
+    ],
+    "campus": "Bloomington",
+    "places": [
+      "Lincoln Boyhood National Memorial",
+      "George Rogers Clark National Historical Park",
+      "Brown County State Park",
+      "Turkey Run State Park",
+      "Indianapolis Motor Speedway"
+    ]
+  },
+  "IA": {
+    "nickname": "Hawkeye State",
+    "cities": [
+      "Cedar Rapids",
+      "Davenport",
+      "Des Moines"
+    ],
+    "campus": "Iowa City",
+    "places": [
+      "Effigy Mounds National Monument",
+      "Herbert Hoover National Historic Site",
+      "Maquoketa Caves State Park",
+      "Amana Colonies",
+      "Field of Dreams movie site"
+    ]
+  },
+  "KS": {
+    "nickname": "Sunflower State",
+    "cities": [
+      "Lawrence",
+      "Manhattan",
+      "Wichita"
+    ],
+    "campus": "Lawrence",
+    "places": [
+      "Tallgrass Prairie National Preserve",
+      "Fort Larned National Historic Site",
+      "Nicodemus National Historic Site",
+      "Monument Rocks",
+      "Brown v. Board of Education National Historical Park"
+    ]
+  },
+  "KY": {
+    "nickname": "Bluegrass State",
+    "cities": [
+      "Bowling Green",
+      "Paducah",
+      "Lexington"
+    ],
+    "campus": "Lexington",
+    "places": [
+      "Mammoth Cave National Park",
+      "Abraham Lincoln Birthplace National Historical Park",
+      "Cumberland Falls State Resort Park",
+      "Churchill Downs",
+      "Red River Gorge"
+    ]
+  },
+  "LA": {
+    "nickname": "Pelican State",
+    "cities": [
+      "Lafayette",
+      "Shreveport",
+      "New Orleans"
+    ],
+    "campus": "Baton Rouge",
+    "places": [
+      "Jean Lafitte National Historical Park and Preserve",
+      "Poverty Point World Heritage Site",
+      "Cane River Creole National Historical Park",
+      "Oak Alley Plantation",
+      "St. Louis Cathedral in the French Quarter"
+    ]
+  },
+  "ME": {
+    "nickname": "Pine Tree State",
+    "cities": [
+      "Bangor",
+      "Lewiston",
+      "Portland"
+    ],
+    "campus": "Orono",
+    "places": [
+      "Acadia National Park",
+      "Baxter State Park",
+      "Portland Head Light",
+      "Katahdin Woods and Waters National Monument",
+      "West Quoddy Head Light"
+    ]
+  },
+  "MD": {
+    "nickname": "Old Line State",
+    "cities": [
+      "Frederick",
+      "Rockville",
+      "Baltimore"
+    ],
+    "campus": "College Park",
+    "places": [
+      "Fort McHenry National Monument",
+      "Antietam National Battlefield",
+      "Harriet Tubman Underground Railroad National Historical Park",
+      "Catoctin Mountain Park",
+      "Assateague Island National Seashore"
+    ]
+  },
+  "MA": {
+    "nickname": "Bay State",
+    "cities": [
+      "Worcester",
+      "Lowell",
+      "Boston"
+    ],
+    "campus": "Amherst",
+    "places": [
+      "Cape Cod National Seashore",
+      "Minute Man National Historical Park",
+      "Salem Maritime National Historical Park",
+      "Boston's Freedom Trail",
+      "Walden Pond State Reservation"
+    ]
+  },
+  "MI": {
+    "nickname": "Great Lakes State",
+    "cities": [
+      "Grand Rapids",
+      "Ann Arbor",
+      "Detroit"
+    ],
+    "campus": "Ann Arbor",
+    "places": [
+      "Isle Royale National Park",
+      "Sleeping Bear Dunes National Lakeshore",
+      "Pictured Rocks National Lakeshore",
+      "Mackinac Island",
+      "The Henry Ford museum"
+    ]
+  },
+  "MN": {
+    "nickname": "North Star State",
+    "cities": [
+      "Duluth",
+      "Rochester",
+      "Minneapolis"
+    ],
+    "campus": "Minneapolis",
+    "places": [
+      "Voyageurs National Park",
+      "Pipestone National Monument",
+      "Split Rock Lighthouse",
+      "Itasca State Park",
+      "Boundary Waters Canoe Area Wilderness"
+    ]
+  },
+  "MS": {
+    "nickname": "Magnolia State",
+    "cities": [
+      "Biloxi",
+      "Hattiesburg",
+      "Tupelo"
+    ],
+    "campus": "Oxford",
+    "places": [
+      "Vicksburg National Military Park",
+      "Tupelo National Battlefield",
+      "Brices Cross Roads National Battlefield Site",
+      "Rowan Oak",
+      "Elvis Presley's birthplace"
+    ]
+  },
+  "MO": {
+    "nickname": "Show-Me State",
+    "cities": [
+      "Springfield",
+      "Columbia",
+      "St. Louis"
+    ],
+    "campus": "Columbia",
+    "places": [
+      "Gateway Arch National Park",
+      "Wilson's Creek National Battlefield",
+      "George Washington Carver National Monument",
+      "Harry S Truman National Historic Site",
+      "Ha Ha Tonka State Park"
+    ]
+  },
+  "MT": {
+    "nickname": "Treasure State",
+    "cities": [
+      "Missoula",
+      "Bozeman",
+      "Billings"
+    ],
+    "campus": "Missoula",
+    "places": [
+      "Glacier National Park",
+      "Little Bighorn Battlefield National Monument",
+      "Bighorn Canyon National Recreation Area",
+      "Lewis and Clark Caverns State Park",
+      "Grant-Kohrs Ranch National Historic Site"
+    ]
+  },
+  "NE": {
+    "nickname": "Cornhusker State",
+    "cities": [
+      "Kearney",
+      "Grand Island",
+      "Omaha"
+    ],
+    "campus": "Lincoln",
+    "places": [
+      "Scotts Bluff National Monument",
+      "Chimney Rock National Historic Site",
+      "Agate Fossil Beds National Monument",
+      "Homestead National Historical Park",
+      "Ashfall Fossil Beds State Historical Park"
+    ]
+  },
+  "NV": {
+    "nickname": "Silver State",
+    "cities": [
+      "Reno",
+      "Henderson",
+      "Las Vegas"
+    ],
+    "campus": "Reno",
+    "places": [
+      "Great Basin National Park",
+      "Valley of Fire State Park",
+      "Red Rock Canyon National Conservation Area",
+      "Hoover Dam",
+      "Lake Mead National Recreation Area"
+    ]
+  },
+  "NH": {
+    "nickname": "Granite State",
+    "cities": [
+      "Nashua",
+      "Portsmouth",
+      "Manchester"
+    ],
+    "campus": "Durham",
+    "places": [
+      "Mount Washington",
+      "Franconia Notch State Park",
+      "Saint-Gaudens National Historical Park",
+      "Lake Winnipesaukee",
+      "Flume Gorge"
+    ]
+  },
+  "NJ": {
+    "nickname": "Garden State",
+    "cities": [
+      "Paterson",
+      "Elizabeth",
+      "Newark"
+    ],
+    "campus": "New Brunswick",
+    "places": [
+      "Paterson Great Falls National Historical Park",
+      "Thomas Edison National Historical Park",
+      "Morristown National Historical Park",
+      "Cape May Lighthouse",
+      "Liberty State Park"
+    ]
+  },
+  "NM": {
+    "nickname": "Land of Enchantment",
+    "cities": [
+      "Las Cruces",
+      "Roswell",
+      "Albuquerque"
+    ],
+    "campus": "Albuquerque",
+    "places": [
+      "White Sands National Park",
+      "Carlsbad Caverns National Park",
+      "Bandelier National Monument",
+      "Chaco Culture National Historical Park",
+      "Gila Cliff Dwellings National Monument"
+    ]
+  },
+  "NY": {
+    "nickname": "Empire State",
+    "cities": [
+      "Buffalo",
+      "Rochester",
+      "Syracuse"
+    ],
+    "campus": "Stony Brook",
+    "places": [
+      "Adirondack Park",
+      "Watkins Glen State Park",
+      "Saratoga National Historical Park",
+      "Fire Island National Seashore",
+      "Niagara Falls State Park"
+    ]
+  },
+  "NC": {
+    "nickname": "Tar Heel State",
+    "cities": [
+      "Greensboro",
+      "Durham",
+      "Charlotte"
+    ],
+    "campus": "Chapel Hill",
+    "places": [
+      "Cape Hatteras National Seashore",
+      "Wright Brothers National Memorial",
+      "Biltmore Estate",
+      "Fort Raleigh National Historic Site",
+      "Cape Lookout National Seashore"
+    ]
+  },
+  "ND": {
+    "nickname": "Peace Garden State",
+    "cities": [
+      "Minot",
+      "Grand Forks",
+      "Fargo"
+    ],
+    "campus": "Grand Forks",
+    "places": [
+      "Theodore Roosevelt National Park",
+      "Knife River Indian Villages National Historic Site",
+      "Fort Union Trading Post National Historic Site",
+      "International Peace Garden",
+      "Fort Abraham Lincoln State Park"
+    ]
+  },
+  "OH": {
+    "nickname": "Buckeye State",
+    "cities": [
+      "Toledo",
+      "Akron",
+      "Cincinnati"
+    ],
+    "campus": "Columbus",
+    "places": [
+      "Cuyahoga Valley National Park",
+      "Hopewell Culture National Historical Park",
+      "Perry's Victory and International Peace Memorial",
+      "Cedar Point",
+      "Rock & Roll Hall of Fame"
+    ]
+  },
+  "OK": {
+    "nickname": "Sooner State",
+    "cities": [
+      "Norman",
+      "Lawton",
+      "Tulsa"
+    ],
+    "campus": "Norman",
+    "places": [
+      "Chickasaw National Recreation Area",
+      "Wichita Mountains Wildlife Refuge",
+      "Washita Battlefield National Historic Site",
+      "Oklahoma City National Memorial",
+      "Philbrook Museum of Art"
+    ]
+  },
+  "OR": {
+    "nickname": "Beaver State",
+    "cities": [
+      "Eugene",
+      "Bend",
+      "Portland"
+    ],
+    "campus": "Eugene",
+    "places": [
+      "Crater Lake National Park",
+      "John Day Fossil Beds National Monument",
+      "Oregon Caves National Monument and Preserve",
+      "Multnomah Falls",
+      "Cannon Beach's Haystack Rock"
+    ]
+  },
+  "PA": {
+    "nickname": "Keystone State",
+    "cities": [
+      "Allentown",
+      "Erie",
+      "Pittsburgh"
+    ],
+    "campus": "University Park",
+    "places": [
+      "Gettysburg National Military Park",
+      "Valley Forge National Historical Park",
+      "Independence National Historical Park",
+      "Fallingwater",
+      "Flight 93 National Memorial"
+    ]
+  },
+  "RI": {
+    "nickname": "Ocean State",
+    "cities": [
+      "Warwick",
+      "Cranston",
+      "Providence"
+    ],
+    "campus": "Kingston",
+    "places": [
+      "Roger Williams National Memorial",
+      "The Breakers mansion",
+      "Beavertail Lighthouse",
+      "Newport's Cliff Walk",
+      "Touro Synagogue"
+    ]
+  },
+  "SC": {
+    "nickname": "Palmetto State",
+    "cities": [
+      "Greenville",
+      "Rock Hill",
+      "Charleston"
+    ],
+    "campus": "Columbia",
+    "places": [
+      "Congaree National Park",
+      "Fort Sumter National Historical Park",
+      "Charles Pinckney National Historic Site",
+      "Huntington Beach State Park",
+      "Brookgreen Gardens"
+    ]
+  },
+  "SD": {
+    "nickname": "Mount Rushmore State",
+    "cities": [
+      "Rapid City",
+      "Aberdeen",
+      "Sioux Falls"
+    ],
+    "campus": "Vermillion",
+    "places": [
+      "Badlands National Park",
+      "Wind Cave National Park",
+      "Jewel Cave National Monument",
+      "Custer State Park",
+      "Minuteman Missile National Historic Site"
+    ]
+  },
+  "TN": {
+    "nickname": "Volunteer State",
+    "cities": [
+      "Knoxville",
+      "Chattanooga",
+      "Memphis"
+    ],
+    "campus": "Knoxville",
+    "places": [
+      "Great Smoky Mountains National Park",
+      "Shiloh National Military Park",
+      "Stones River National Battlefield",
+      "Andrew Johnson National Historic Site",
+      "Graceland"
+    ]
+  },
+  "TX": {
+    "nickname": "Lone Star State",
+    "cities": [
+      "Dallas",
+      "Fort Worth",
+      "Houston"
+    ],
+    "campus": "Austin",
+    "places": [
+      "Big Bend National Park",
+      "Guadalupe Mountains National Park",
+      "San Antonio Missions National Historical Park",
+      "Padre Island National Seashore",
+      "Palo Duro Canyon State Park"
+    ]
+  },
+  "UT": {
+    "nickname": "Beehive State",
+    "cities": [
+      "Provo",
+      "Ogden",
+      "Salt Lake City"
+    ],
+    "campus": "Salt Lake City",
+    "places": [
+      "Bryce Canyon National Park",
+      "Capitol Reef National Park",
+      "Canyonlands National Park",
+      "Arches National Park",
+      "Zion National Park"
+    ]
+  },
+  "VT": {
+    "nickname": "Green Mountain State",
+    "cities": [
+      "Rutland",
+      "Barre",
+      "Burlington"
+    ],
+    "campus": "Burlington",
+    "places": [
+      "Marsh-Billings-Rockefeller National Historical Park",
+      "Bennington Battle Monument",
+      "Quechee Gorge",
+      "Mount Mansfield",
+      "Shelburne Museum"
+    ]
+  },
+  "VA": {
+    "nickname": "Old Dominion",
+    "cities": [
+      "Norfolk",
+      "Roanoke",
+      "Virginia Beach"
+    ],
+    "campus": "Charlottesville",
+    "places": [
+      "Shenandoah National Park",
+      "Colonial National Historical Park",
+      "Appomattox Court House National Historical Park",
+      "Monticello",
+      "Luray Caverns"
+    ]
+  },
+  "WA": {
+    "nickname": "Evergreen State",
+    "cities": [
+      "Spokane",
+      "Tacoma",
+      "Seattle"
+    ],
+    "campus": "Seattle",
+    "places": [
+      "Mount Rainier National Park",
+      "Olympic National Park",
+      "North Cascades National Park",
+      "Mount St. Helens",
+      "San Juan Island National Historical Park"
+    ]
+  },
+  "WV": {
+    "nickname": "Mountain State",
+    "cities": [
+      "Huntington",
+      "Morgantown",
+      "Parkersburg"
+    ],
+    "campus": "Morgantown",
+    "places": [
+      "New River Gorge National Park and Preserve",
+      "Harpers Ferry National Historical Park",
+      "Seneca Rocks",
+      "Blackwater Falls State Park",
+      "Cass Scenic Railroad State Park"
+    ]
+  },
+  "WI": {
+    "nickname": "Badger State",
+    "cities": [
+      "Green Bay",
+      "Eau Claire",
+      "Milwaukee"
+    ],
+    "campus": "Madison",
+    "places": [
+      "Apostle Islands National Lakeshore",
+      "Devil's Lake State Park",
+      "Taliesin",
+      "Lambeau Field",
+      "Cave of the Mounds"
+    ]
+  },
+  "WY": {
+    "nickname": "Equality State",
+    "cities": [
+      "Laramie",
+      "Sheridan",
+      "Casper"
+    ],
+    "campus": "Laramie",
+    "places": [
+      "Grand Teton National Park",
+      "Devils Tower National Monument",
+      "Fort Laramie National Historic Site",
+      "Fossil Butte National Monument",
+      "Yellowstone National Park"
+    ]
+  }
+}

@@ -8,26 +8,53 @@ struct USState: Codable, Identifiable, Equatable {
     let capital: String
     let landmark: String
     let giveaway: String
+    let hintPool: [Hint]?
+    static func == (lhs: USState, rhs: USState) -> Bool { lhs.id == rhs.id }
 }
-struct Hint: Codable { let title: String; let text: String; let cost: Int }
+/// Difficulty runs from 1 (very hard/free) to 5 (giveaway/most expensive).
+struct Hint: Codable {
+    let title: String
+    let text: String
+    let cost: Int
+    var id: String? = nil
+    var difficulty: Int? = nil
+    var source: String? = nil
+    var difficultyLabel: String {
+        switch difficulty ?? ([0: 1, 70: 2, 90: 2, 160: 3, 250: 4, 350: 5][cost] ?? 1) {
+        case 1: return "Very hard"
+        case 2: return "Hard"
+        case 3: return "Medium"
+        case 4: return "Easy"
+        default: return "Giveaway"
+        }
+    }
+}
 struct Round: Codable {
     let state: USState
     let hints: [Hint]
     var revealed = 0
     var guess: String?
     var points = 0
+    // Optional fields allow old saved sessions to load without losing progress.
+    var abbreviationGuess: String?
+    var bonusSkipped: Bool?
+    var bonusCorrect: Bool { abbreviationGuess == state.abbreviation }
+    var bonusResolved: Bool { abbreviationGuess != nil || bonusSkipped == true }
     var available: Int { 1000 - hints.prefix(revealed).reduce(0) { $0 + $1.cost } }
-    init(state: USState, alternate: Bool = Bool.random()) {
+    init(state: USState, recentHintIDs: [String] = []) {
         self.state = state
-        hints = [
-            Hint(title: "A little nature", text: "My floral emblem is \(state.flower.lowercased()).", cost: 0),
-            alternate
-                ? Hint(title: "A small detail", text: "My postal abbreviation starts with \(state.abbreviation.prefix(1)).", cost: 90)
-                : Hint(title: "A small detail", text: "My name has \(state.name.filter { $0 != " " }.count) letters\(state.name.contains(" ") ? " and two words" : "").", cost: 70),
-            Hint(title: "Somewhere special", text: state.landmark, cost: 160),
-            Hint(title: "Capital idea", text: "My capital is \(state.capital).", cost: 250),
-            Hint(title: "The big giveaway", text: state.giveaway, cost: 350)
-        ]
+        // Legacy sessions retain their selected hints. All new rounds use the full bank.
+        let pool = state.hintPool ?? []
+        var selected: [Hint] = []
+        for tier in 1...5 {
+            let tierPool = pool.filter { $0.difficulty == tier }
+            precondition(tierPool.count >= 5, "Every state needs five hints at each difficulty")
+            let options = tierPool
+            let unseen = options.filter { !recentHintIDs.contains($0.id ?? "") }
+            let previous = recentHintIDs.last { id in options.contains { $0.id == id } }
+            selected.append((unseen.isEmpty ? options.filter { $0.id != previous } : unseen).randomElement()!)
+        }
+        hints = selected
     }
 }
 struct Session: Codable {
@@ -35,8 +62,11 @@ struct Session: Codable {
     var index = 0
     var finished = false
     var score: Int { rounds.reduce(0) { $0 + $1.points } }
-    init(states: [USState], count: Int) {
-        rounds = states.shuffled().prefix(max(1, min(count, states.count))).map { Round(state: $0) }
+    init(states: [USState], count: Int, recentHints: [String: [String]] = [:]) {
+        precondition(!states.isEmpty)
+        rounds = states.shuffled().prefix(max(1, min(count, states.count))).map {
+            Round(state: $0, recentHintIDs: recentHints[$0.id, default: []])
+        }
     }
     mutating func reveal() {
         guard !finished, rounds[index].guess == nil, rounds[index].revealed < 5 else { return }
@@ -45,11 +75,25 @@ struct Session: Codable {
     @discardableResult mutating func submit(_ guess: USState) -> Bool {
         guard !finished, rounds[index].guess == nil else { return false }
         rounds[index].guess = guess.name
-        rounds[index].points = guess == rounds[index].state ? rounds[index].available : 0
+        rounds[index].points = guess.id == rounds[index].state.id ? rounds[index].available : 0
         return true
     }
+    /// A bonus has one attempt, accepts only two ASCII letters, and never subtracts points.
+    /// Zero-point rounds still offer practice, but doubling zero cannot award points.
+    @discardableResult mutating func submitAbbreviation(_ input: String) -> Bool {
+        guard !finished, rounds[index].guess != nil, !rounds[index].bonusResolved else { return false }
+        let code = input.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        guard code.count == 2, code.allSatisfy({ $0.isASCII && $0.isLetter }) else { return false }
+        rounds[index].abbreviationGuess = code
+        if rounds[index].bonusCorrect { rounds[index].points *= 2 }
+        return true
+    }
+    mutating func skipBonus() {
+        guard !finished, rounds[index].guess != nil, !rounds[index].bonusResolved else { return }
+        rounds[index].bonusSkipped = true
+    }
     mutating func advance() {
-        guard !finished, rounds[index].guess != nil else { return }
+        guard !finished, rounds[index].guess != nil, rounds[index].bonusResolved else { return }
         if index + 1 == rounds.count { finished = true } else { index += 1 }
     }
 }
